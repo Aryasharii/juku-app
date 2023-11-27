@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juku - eCommerce Website</title>
+
+    <!--
+    - favicon
+  -->
+    <link
+      rel="shortcut icon"
+      href="./assets/images/logo/favicon.png"
+      type="image/x-icon"
+    />
+
+    <!--
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!--
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="overlay" data-overlay></div>
+
+    <!--
+    - MODAL
+  -->
+
+    <div class="modal" data-modal>
+      <div class="modal-close-overlay" data-modal-overlay></div>
+
+      <div class="modal-content">
+        <button class="modal-close-btn" data-modal-close>
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+
+        <div class="newsletter-img">
+          <img
+            src="./assets/images/newsletter.png"
+            alt="berlangganan newsletter"
+            width="400"
+            height="400"
+          />
+        </div>
+
+        <div class="newsletter">
+          <form action="#">
+            <div class="newsletter-header">
+              <h3 class="newsletter-title">Berlangganan Newsletter</h3>
+
+              <p class="newsletter-desc">
+                Berlangganan <b>Juku</b> untuk mendapatkan pembaruan produk
+                terbaru dan diskon.
+              </p>
+            </div>
+
+            <input
+              type="email"
+              name="email"
+              class="email-field"
+              placeholder="Alamat Email"
+              required
+            />
+
+            <button type="submit" class="btn-newsletter">Berlangganan</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!--
+    - NOTIFICATION TOAST
+  -->
+
+    <div class="notification-toast" data-toast>
+      <button class="toast-close-btn" data-toast-close>
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+
+      <div class="toast-banner">
+        <img
+          src="./assets/images/products/ikan.png"
+          alt="Foto Ikan"
+          width="80"
+          height="70"
+        />
+      </div>
+
+      <div class="toast-detail">
+        <p class="toast-message">Seseorang baru saja membeli</p>
+
+        <p class="toast-title">Ikan Bawal</p>
+
+        <p class="toast-meta"><time datetime="PT2M">2 Menit</time> yang lalu</p>
+      </div>
+    </div>
+
+    <!--
+    - HEADER
+  -->
+
+    <header>
+      <header>
+        <div class="header-top">
+          <div class="container">
+            <ul class="header-social-container">
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+              </li>
+            </ul>
+
+            <div class="header-alert-news">
+              <p>
+                <b>Pengiriman Gratis</b>
+                Pesanan Minggu Ini di atas - Rp. 100.000,-
+              </p>
+            </div>
+
+            <div class="header-top-actions">
+              <select name="currency">
+                <option value="idr">IDR </option>
+                <option value="usd">USD &dollar;</option>
+              </select>
+
+              <select name="language">
+                <option value="id-ID">Indonesia</option>
+                <option value="en-US">English</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="header-main">
+          <div class="container">
+            <a href="#" class="header-logo">
+              <img
+                src="./assets/images/logo/logo.png"
+                alt="Logo Juku"
+                width="60"
+              />
+            </a>
+
+            <div class="header-search-container">
+              <input
+                type="search"
+                name="search"
+                class="search-field"
+                placeholder="Masukkan nama produk Anda..."
+              />
+
+              <button class="search-btn">
+                <ion-icon name="search-outline"></ion-icon>
+              </button>
+            </div>
+
+            <div class="header-user-actions">
+              <button class="action-btn">
+                <ion-icon name="person-outline"></ion-icon>
+              </button>
+
+              <button class="action-btn">
+                <ion-icon name="heart-outline"></ion-icon>
+                <span class="count">0</span>
+              </button>
+
+              <button class="action-btn">
+                <ion-icon name="bag-handle-outline"></ion-icon>
+                <span class="count">0</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ... [bagian menu dan navigasi mobile] ... -->
+      </header>
+
+      <nav class="desktop-navigation-menu">
+  <div class="container">
+    <ul class="desktop-menu-category-list">
+      <li class="menu-category">
+        <a href="#" class="menu-title">Beranda</a>
+      </li>
+
+      <li class="menu-category">
+        <a href="#" class="menu-title">Kategori</a>
+
+        <div class="dropdown-panel">
+          <ul class="dropdown-panel-list">
+            <li class="menu-title">
+              <a href="#">Ikan Hias</a>
+            </li>
+
+            <li class="panel-list-item">
+              <a href="#">Ikan Air Tawar</a>
+            </li>
+
+            <li class="panel-list-item">
+              <a href="#">Ikan Laut</a>
+            </li>
+
+            <li class="panel-list-item">
+              <a href="#">Aksesoris Ikan</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+
+      <!-- Kategori Ikan Air Tawar -->
+      <li class="menu-category">
+        <a href="#" class="menu-title">Ikan Air Tawar</a>
+
+        <ul class="dropdown-list">
+          <li class="dropdown-item">
+            <a href="#">Ikan Cupang</a>
+          </li>
+
+          <li class="dropdown-item">
+            <a href="#">Ikan Guppy</a>
+          </li>
+
+          <li class="dropdown-item">
+            <a href="#">Ikan Koi</a>
+          </li>
+
+          <li class="dropdown-item">
+            <a href="#">Ikan Mas</a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- Kategori Ikan Laut -->
+      <li class="menu-category">
+        <a href="#" class="menu-title">Ikan Laut</a>
+
+        <ul class="dropdown-list">
+          <li class="dropdown-item">
+            <a href="#">Ikan Tenggiri</a>
+          </li>
+
+          <li class="dropdown-item">
+            <a href="#">Ikan Kakap</a>
+          </li>
+
+          <li class="dropdown-item">
+            <a href="#">Ikan Kerapu</a>
+          </li>
+
+          <li class="dropdown-item">
+            <a href="#">Ikan Salmon</a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- Kategori Aksesoris Aquarium -->
+      <li class="menu-category">
+        <a href="#" class="menu-title">Aksesoris Aquarium</a>
+
+        <ul class="dropdown-list">
+          <li class="dropdown-item">
+            <a href="#">Pompa Air</a>
+          </li>
+
+          <li class="dropdown-item">
+            <a href="#">Filter</a>
+          </li>
+
+          <li class="dropdown-item">
+            <a href="#">Penerangan</a>
+          </li>
+
+          <li class="dropdown-item">
+            <a href="#">Tanaman Air</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="menu-category">
+        <a href="#" class="menu-title">Blog</a>
+      </li>
+
+      <li class="menu-category">
+        <a href="#" class="menu-title">Penawaran Spesial</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+      <div class="mobile-bottom-navigation">
+  <button class="action-btn" data-mobile-menu-open-btn>
+    <ion-icon name="menu-outline"></ion-icon>
+  </button>
+
+  <button class="action-btn">
+    <ion-icon name="bag-handle-outline"></ion-icon>
+    <span class="count">0</span>
+  </button>
+
+  <button class="action-btn">
+    <ion-icon name="home-outline"></ion-icon>
+  </button>
+
+  <button class="action-btn">
+    <ion-icon name="heart-outline"></ion-icon>
+    <span class="count">0</span>
+  </button>
+
+  <button class="action-btn" data-mobile-menu-open-btn>
+    <ion-icon name="grid-outline"></ion-icon>
+  </button>
+</div>
+
+<na class="mobile-navigation-menu has-scrollbar" data-mobile-menu>
+  <div class="menu-top">
+    <h2 class="menu-title">Menu</h2>
+    <button class="menu-close-btn" data-mobile-menu-close-btn>
+      <ion-icon name="close-outline"></ion-icon>
+    </button>
+  </div>
+
+  <ul class="mobile-menu-category-list">
+    <li class="menu-category">
+      <a href="#" class="menu-title">Beranda</a>
+    </li>
+
+    <li class="menu-category">
+      <a href="#" class="menu-title">Kategori</a>
+      <ul class="submenu-category-list" data-accordion>
+        <li class="submenu-category">
+          <a href="#">Ikan Hias</a>
+        </li>
+        <!-- Menambahkan subkategori ikan air tawar -->
+        <li class="submenu-category">
+          <a href="#">Ikan Air Tawar</a>
+        </li>
+        <!-- Menambahkan subkategori ikan laut -->
+        <li class="submenu-category">
+          <a href="#">Ikan Laut</a>
+        </li>
+        <!-- Menambahkan subkategori aksesoris ikan -->
+        <li class="submenu-category">
+          <a href="#">Aksesoris Ikan</a>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Menambahkan kategori Ikan Air Tawar -->
+    <li class="menu-category">
+      <a href="#" class="menu-title">Ikan Air Tawar</a>
+      <ul class="submenu-category-list" data-accordion>
+        <li class="submenu-category">
+          <a href="#">Ikan Cupang</a>
+        </li>
+        <li class="submenu-category">
+          <a href="#">Ikan Guppy</a>
+        </li>
+        <li class="submenu-category">
+          <a href="#">Ikan Koi</a>
+        </li>
+        <li class="submenu-category">
+          <a href="#">Ikan Mas</a>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Menambahkan kategori Ikan Laut -->
+    <li class="menu-category">
+      <a href="#" class="menu-title">Ikan Laut</a>
+      <ul class="submenu-category-list" data-accordion>
+        <li class="submenu-category">
+          <a href="#">Ikan Tenggiri</a>
+        </li>
+        <li class="submenu-category">
+          <a href="#">Ikan Kakap</a>
+        </li>
+        <li class="submenu-category">
+          <a href="#">Ikan Kerapu</a>
+        </li>
+        <li class="submenu-category">
+          <a href="#">Ikan Salmon</a>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Menambahkan kategori Aksesoris Aquarium -->
+    <li class="menu-category">
+      <a href="#" class="menu-title">Aksesoris Aquarium</a>
+      <ul class="submenu-category-list" data-accordion>
+        <li class="submenu-category">
+          <a href="#">Pompa Air</a>
+        </li>
+        <li class="submenu-category">
+          <a href="#">Filter</a>
+        </li>
+        <li class="submenu-category">
+          <a href="#">Penerangan</a>
+        </li>
+        <li class="submenu-category">
+          <a href="#">Tanaman Air</a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="menu-category">
+      <a href="#" class="menu-title">Blog</a>
+    </li>
+
+    <li class="menu-category">
+      <a href="#" class="menu-title">Penawaran Spesial</a>
+    </li>
+  </ul>
+
+  <!-- Menambahkan bagian kategori mata uang dan bahasa -->
+  <div class="menu-bottom">
+    <ul class="menu-category-list">
+      <li class="menu-category">
+        <button class="accordion-menu" data-accordion-btn>
+          <p class="menu-title">Bahasa</p>
+          <ion-icon name="caret-back-outline" class="caret-back"></ion-icon>
+        </button>
+        <ul class="submenu-category-list" data-accordion>
+          <li class="submenu-category">
+            <a href="#" class="submenu-title">English</a>
+          </li>
+          <li class="submenu-category">
+            <a href="#" class="submenu-title">Indonesia</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="menu-category">
+        <button class="accordion-menu" data-accordion-btn>
+          <p class="menu-title">Mata Uang</p>
+          <ion-icon name="caret-back-outline" class="caret-back"></ion-icon>
+        </button>
+        <ul class="submenu-category-list" data-accordion>
+          <li class="submenu-category">
+            <a href="#" class="submenu-title">IDR</a>
+          </li>
+          <li class="submenu-category">
+            <a href="#" class="submenu-title">USD &dollar;</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+          <ul class="menu-social-container">
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!--
+    - MAIN
+  -->
+
+    <main>
+      <!--
+  - BANNER
+-->
+
+      <div class="banner">
+        <div class="container">
+          <div class="slider-container has-scrollbar">
+            <div class="slider-item">
+              <img
+                src="./assets/images/banner-1.jpg"
+                alt="penawaran spesial ikan"
+                class="banner-img"
+              />
+              <div class="banner-content">
+                <p class="banner-subtitle">Penawaran Spesial</p>
+                <h2 class="banner-title">Ikan Segar Terbaik</h2>
+                <p class="banner-text">
+                  mulai dari Rp <b>20,000</b>.00 per kilogram
+                </p>
+                <a href="#" class="banner-btn">Belanja Sekarang</a>
+              </div>
+            </div>
+
+            <div class="slider-item">
+              <img
+                src="./assets/images/banner-2.jpg"
+                alt="diskon ikan terbaru"
+                class="banner-img"
+              />
+              <div class="banner-content">
+                <p class="banner-subtitle">Diskon Ikan</p>
+                <h2 class="banner-title">Hemat Hingga 30%</h2>
+                <p class="banner-text">
+                  mulai dari Rp <b>15,000</b>.00 per kilogram
+                </p>
+                <a href="#" class="banner-btn">Belanja Sekarang</a>
+              </div>
+            </div>
+
+            <div class="slider-item">
+              <img
+                src="./assets/images/banner-3.jpg"
+                alt="penawaran spesial ikan laut"
+                class="banner-img"
+              />
+              <div class="banner-content">
+                <p class="banner-subtitle">Penawaran Ikan Laut</p>
+                <h2 class="banner-title">Rasakan Kelezatan Laut</h2>
+                <p class="banner-text">
+                  mulai dari Rp <b>40,000</b>.00 per kilogram
+                </p>
+                <a href="#" class="banner-btn">Belanja Sekarang</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--
+      - CATEGORY
+    -->
+<div class="category">
+  <div class="container">
+    <div class="category-item-container has-scrollbar">
+      <div class="category-item">
+        <div class="category-img-box">
+          <img
+            src="./assets/images/icons/ikan-segar.jpg"
+            alt="ikan segar"
+            width="40"
+          />
+        </div>
+
+        <div class="category-content-box">
+          <div class="category-content-flex">
+            <h3 class="category-item-title">Ikan Segar</h3>
+            <p class="category-item-amount">(53)</p>
+          </div>
+          <a href="#" class="category-btn">Tampilkan semua</a>
+        </div>
+      </div>
+
+      <div class="category-item">
+        <div class="category-img-box">
+          <img
+            src="./assets/images/icons/aquarium.jpg"
+            alt="perlengkapan aquarium"
+            width="40"
+          />
+        </div>
+
+        <div class="category-content-box">
+          <div class="category-content-flex">
+            <h3 class="category-item-title">Perlengkapan Aquarium</h3>
+            <p class="category-item-amount">(58)</p>
+          </div>
+          <a href="#" class="category-btn">Tampilkan semua</a>
+        </div>
+      </div>
+
+      <div class="category-item">
+        <div class="category-img-box">
+          <img
+            src="./assets/images/icons/fish-food.jpg"
+            alt="makanan ikan"
+            width="40"
+          />
+        </div>
+
+        <div class="category-content-box">
+          <div class="category-content-flex">
+            <h3 class="category-item-title">Makanan Ikan</h3>
+            <p class="category-item-amount">(68)</p>
+          </div>
+          <a href="#" class="category-btn">Tampilkan semua</a>
+        </div>
+      </div>
+
+      <!-- dapat ditambahkan kategori ikan lainnya sesuai kebutuhan -->
+    </div>
+  </div>
+</div>
+
+      <!--
+      - PRODUCT
+    -->
+
+      <div class="product-container">
+        <div class="container">
+          <!--
+          - SIDEBAR
+        -->
+
+        <div class="sidebar has-scrollbar" data-mobile-menu>
+  <div class="sidebar-category">
+    <div class="sidebar-top">
+      <h2 class="sidebar-title">Kategori</h2>
+      <button class="sidebar-close-btn" data-mobile-menu-close-btn>
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+    </div>
+
+    <ul class="sidebar-menu-category-list">
+      <li class="sidebar-menu-category">
+        <button class="sidebar-accordion-menu" data-accordion-btn>
+          <div class="menu-title-flex">
+            <img
+              src="./assets/images/icons/ikan.png"
+              alt="ikan"
+              width="20"
+              height="20"
+              class="menu-title-img"
+            />
+            <p class="menu-title">Ikan Segar</p>
+          </div>
+          <div>
+            <ion-icon name="add-outline" class="add-icon"></ion-icon>
+            <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+          </div>
+        </button>
+
+        <ul class="sidebar-submenu-category-list" data-accordion>
+          <li class="sidebar-submenu-category">
+            <a href="#" class="sidebar-submenu-title">
+              <p class="product-name">Salmon</p>
+              <data value="50" class="stock" title="Stok Tersedia">50 kg</data>
+            </a>
+          </li>
+
+          <li class="sidebar-submenu-category">
+            <a href="#" class="sidebar-submenu-title">
+              <p class="product-name">Tuna</p>
+              <data value="30" class="stock" title="Stok Tersedia">30 kg</data>
+            </a>
+          </li>
+
+          <!-- Lanjutkan dengan jenis ikan lainnya sesuai dengan toko ikan Anda -->
+        </ul>
+      </li>
+
+      <li class="sidebar-menu-category">
+        <button class="sidebar-accordion-menu" data-accordion-btn>
+          <div class="menu-title-flex">
+            <img
+              src="./assets/images/icons/udang.png"
+              alt="udang"
+              class="menu-title-img"
+              width="20"
+              height="20"
+            />
+            <p class="menu-title">Udang</p>
+          </div>
+          <div>
+            <ion-icon name="add-outline" class="add-icon"></ion-icon>
+            <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+          </div>
+        </button>
+
+        <ul class="sidebar-submenu-category-list" data-accordion>
+          <li class="sidebar-submenu-category">
+            <a href="#" class="sidebar-submenu-title">
+              <p class="product-name">Udang Jumbo</p>
+              <data value="40" class="stock" title="Stok Tersedia">40 kg</data>
+            </a>
+          </li>
+
+          <li class="sidebar-submenu-category">
+            <a href="#" class="sidebar-submenu-title">
+              <p class="product-name">Udang Harimau</p>
+              <data value="25" class="stock" title="Stok Tersedia">25 kg</data>
+            </a>
+          </li>
+
+          <!-- Lanjutkan dengan jenis udang lainnya sesuai dengan toko ikan Anda -->
+        </ul>
+      </li>
+
+      <!-- Tambahkan kategori ikan lainnya sesuai dengan kebutuhan -->
+    </ul>
+  </div>
+</div>
+            <!--
+            - PRODUCT MINIMAL
+          -->
+
+            <div class="product-minimal">
+              <div class="product-showcase">
+  <h2 class="title">Ikan Terbaru</h2>
+
+  <div class="showcase-wrapper has-scrollbar">
+    <div class="showcase-container">
+      <div class="showcase">
+        <a href="#" class="showcase-img-box">
+          <img
+            src="./assets/images/products/ikan-tuna.jpeg"
+            alt="Ikan Tuna"
+            class="showcase-img"
+            width="70"
+          />
+        </a>
+
+        <div class="showcase-content">
+          <a href="#">
+            <h4 class="showcase-title">
+              Ikan Tuna
+            </h4>
+          </a>
+
+          <a href="#" class="showcase-category">Ikan Laut</a>
+
+          <div class="price-box">
+            <p class="price">Rp 100.000</p>
+            <del>Rp 75.000</del>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tambahkan barang ikan lainnya dengan struktur serupa -->
+    </div>
+
+    <div class="showcase-container">
+      <div class="showcase">
+        <a href="#" class="showcase-img-box">
+          <img
+            src="./assets/images/products/ikan-salmon.jpeg"
+            alt="Ikan Salmon"
+            class="showcase-img"
+            width="70"
+          />
+        </a>
+
+        <div class="showcase-content">
+          <a href="#">
+            <h4 class="showcase-title">
+              Ikan Salmon
+            </h4>
+          </a>
+
+          <a href="#" class="showcase-category">Ikan Laut</a>
+
+          <div class="price-box">
+            <p class="price">Rp 150.000</p>
+            <del>Rp 120.000</del>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tambahkan barang ikan lainnya dengan struktur serupa -->
+    </div>
+  </div>
+</div>
+
+              <div class="product-showcase">
+                <h2 class="title">Trending</h2>
+
+                <div class="showcase-wrapper has-scrollbar">
+    <div class="showcase-container">
+        <div class="showcase">
+            <a href="#" class="showcase-img-box">
+                <img src="./assets/images/products/ikan-gurami.jpeg" alt="Ikan Gurami" class="showcase-img" width="70" />
+            </a>
+            <div class="showcase-content">
+                <a href="#">
+                    <h4 class="showcase-title">
+                        Ikan Gurami
+                    </h4>
+                </a>
+                <a href="#" class="showcase-category">Ikan Air Tawar</a>
+                <div class="price-box">
+                    <p class="price">Rp 25.000 / ekor</p>
+                    <del>Rp 30.000 / ekor</del>
+                </div>
+            </div>
+        </div>
+
+        <div class="showcase">
+            <a href="#" class="showcase-img-box">
+                <img src="./assets/images/products/ikan-kakap.jpeg" alt="Ikan Kakap Merah" class="showcase-img" width="70" />
+            </a>
+            <div class="showcase-content">
+                <a href="#">
+                    <h4 class="showcase-title">
+                        Ikan Kakap Merah
+                    </h4>
+                </a>
+                <a href="#" class="showcase-category">Ikan Laut</a>
+                <div class="price-box">
+                    <p class="price">Rp 50.000 / ekor</p>
+                    <del>Rp 60.000 / ekor</del>
+                </div>
+            </div>
+        </div>
+      </div>
+        <!-- Tambahkan detail ikan lainnya di sini... -->
+    </div>
+
+    <!-- <div class="showcase-container"> Tambahkan detail ikan lainnya di sini...\</div> -->
+</div>
+            <!--
+            - PRODUCT FEATURED
+          -->
+
+<div class="product-featured">
+    <h2 class="title">Deal of the day</h2>
+
+    <div class="showcase-wrapper has-scrollbar">
+        <div class="showcase-container">
+            <div class="showcase">
+                <div class="showcase-banner">
+                    <img src="./assets/images/ikan-1.jpg" alt="Ikan Baronang" class="showcase-img" />
+                </div>
+
+                <div class="showcase-content">
+                    <div class="showcase-rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                    </div>
+
+                    <a href="#">
+                        <h3 class="showcase-title">
+                            Ikan Baronang
+                        </h3>
+                    </a>
+
+                    <p class="showcase-desc">
+                        Ikan air laut yang lezat dan bergizi. Dapatkan kualitas terbaik!
+                    </p>
+
+                    <div class="price-box">
+                        <p class="price">Rp 35.000 / ekor</p>
+                        <del>Rp 40.000 / ekor</del>
+                    </div>
+
+                    <button class="add-cart-btn">add to cart</button>
+
+                    <div class="showcase-status">
+                        <div class="wrapper">
+                            <p>already sold: <b>20</b></p>
+                            <p>available: <b>40</b></p>
+                        </div>
+                        <div class="showcase-status-bar"></div>
+                    </div>
+
+                    <div class="countdown-box">
+                        <p class="countdown-desc">Hurry Up! Offer ends in:</p>
+
+                        <div class="countdown">
+                            <div class="countdown-content">
+                                <p class="display-number">360</p>
+                                <p class="display-text">Days</p>
+                            </div>
+
+                            <div class="countdown-content">
+                                <p class="display-number">24</p>
+                                <p class="display-text">Hours</p>
+                            </div>
+
+                            <div class="countdown-content">
+                                <p class="display-number">59</p>
+                                <p class="display-text">Min</p>
+                            </div>
+
+                            <div class="countdown-content">
+                                <p class="display-number">00</p>
+                                <p class="display-text">Sec</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+      <!--
+      - TESTIMONIALS, CTA & SERVICE
+    -->
+
+      <div>
+        <div class="container">
+          <div class="testimonials-box">
+            <!--
+            - TESTIMONIALS
+          -->
+<div class="testimonial">
+    <h2 class="title">Testimonial</h2>
+
+    <div class="testimonial-card">
+        <img
+            src="./assets/images/testimonial-foto.jpg"
+            alt="Nama Pelanggan"
+            class="testimonial-banner"
+            width="80"
+            height="80"
+        />
+
+        <p class="testimonial-name">Fulan</p>
+
+        <p class="testimonial-title">Pengguna Juku</p>
+
+        <img
+            src="./assets/images/icons/quotes.svg"
+            alt="Tanda kutip"
+            class="quotation-img"
+            width="26"
+        />
+
+        <p class="testimonial-desc">
+            "Terkesan dengan kualitas ikan yang diberikan oleh penjual ini. Ikan segar dan bersih! Sudah beberapa kali membeli dan tidak pernah kecewa. Sangat merekomendasikan kepada siapa pun yang mencari ikan berkualitas tinggi."
+        </p>
+    </div>
+</div>
+
+            <!--
+            - CTA
+          -->
+
+<div class="cta-container">
+    <img
+        src="./assets/images/cta-banner.jpg"
+        alt="koleksi musim panas"
+        class="cta-banner"
+    />
+
+    <a href="#" class="cta-content">
+        <p class="discount">Diskon 25%</p>
+
+        <h2 class="cta-title">Ikan Teri Kering</h2>
+
+        <p class="cta-text">Mulai dari Rp10.000</p>
+
+        <button class="cta-btn">Belanja sekarang</button>
+    </a>
+</div>
+
+
+            <!--
+            - SERVICE
+          -->
+
+<div class="service">
+    <h2 class="title">Layanan Kami</h2>
+
+    <div class="service-container">
+        <a href="#" class="service-item">
+            <div class="service-icon">
+                <ion-icon name="boat-outline"></ion-icon>
+            </div>
+
+            <div class="service-content">
+                <h3 class="service-title">Pengiriman di Indonesia</h3>
+                <p class="service-desc">Gratis untuk Pesanan di atas Rp100.000</p>
+            </div>
+        </a>
+
+        <a href="#" class="service-item">
+            <div class="service-icon">
+                <ion-icon name="rocket-outline"></ion-icon>
+            </div>
+
+            <div class="service-content">
+                <h3 class="service-title">Pengiriman Hari Berikutnya</h3>
+                <p class="service-desc">Hanya untuk Lokasi Tertentu</p>
+            </div>
+        </a>
+
+        <a href="#" class="service-item">
+            <div class="service-icon">
+                <ion-icon name="call-outline"></ion-icon>
+            </div>
+
+            <div class="service-content">
+                <h3 class="service-title">Dukungan Online 24 Jam</h3>
+                <p class="service-desc">Bantuan Kapan Saja Anda Butuhkan</p>
+            </div>
+        </a>
+
+        <a href="#" class="service-item">
+            <div class="service-icon">
+                <ion-icon name="arrow-undo-outline"></ion-icon>
+            </div>
+
+            <div class="service-content">
+                <h3 class="service-title">Kebijakan Pengembalian</h3>
+                <p class="service-desc">Pengembalian Mudah & Gratis</p>
+            </div>
+        </a>
+
+        <a href="#" class="service-item">
+            <div class="service-icon">
+                <ion-icon name="ticket-outline"></ion-icon>
+            </div>
+
+            <div class="service-content">
+                <h3 class="service-title">Diskon 30%</h3>
+                <p class="service-desc">Untuk Pesanan di atas Rp100.000</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+
+      <!--
+      - BLOG
+    -->
+<div class="blog">
+    <div class="container">
+        <div class="blog-container has-scrollbar">
+            <div class="blog-card">
+                <a href="#">
+                    <img
+                        src="./assets/images/blog-1.png"
+                        alt="Panduan KPI Penjualan Ikan 2022 untuk Eksekutif Ikan"
+                        width="300"
+                        class="blog-banner"
+                    />
+                </a>
+
+                <div class="blog-content">
+                    <a href="#" class="blog-category">Ikan</a>
+
+                    <a href="#">
+                        <h3 class="blog-title">
+                            Panduan KPI Penjualan Ikan 2022 untuk Eksekutif Ikan
+                        </h3>
+                    </a>
+
+                    <p class="blog-meta">
+                        By <cite>Mr Admin</cite> /
+                        <time datetime="2022-04-06">06 Apr 2022</time>
+                    </p>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <a href="#">
+                    <img
+                        src="./assets/images/blog-2.jpg"
+                        alt="Tren Ikan Terbaru: Bagaimana Memenangkan Persaingan Pengambilan."
+                        class="blog-banner"
+                        width="300"
+                    />
+                </a>
+
+                <div class="blog-content">
+                    <a href="#" class="blog-category">Ikan</a>
+
+                    <h3>
+                        <a href="#" class="blog-title"
+                            >Tren Ikan Terbaru: Bagaimana Memenangkan Persaingan Pengambilan.</a
+                        >
+                    </h3>
+
+                    <p class="blog-meta">
+                        By <cite>Mr Robin</cite> /
+                        <time datetime="2022-01-18">18 Jan 2022</time>
+                    </p>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <a href="#">
+                    <img
+                        src="./assets/images/blog-3.jpg"
+                        alt="Vendor Ikan: Klaim Bagian Anda dari Pendapatan Online SNAP."
+                        class="blog-banner"
+                        width="300"
+                    />
+                </a>
+
+                <div class="blog-content">
+                    <a href="#" class="blog-category">Ikan</a>
+
+                    <h3>
+                        <a href="#" class="blog-title"
+                            >Vendor Ikan: Klaim Bagian Anda dari Pendapatan Online SNAP.</a
+                        >
+                    </h3>
+
+                    <p class="blog-meta">
+                        By <cite>Mr Selsa</cite> /
+                        <time datetime="2022-02-10">10 Feb 2022</time>
+                    </p>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <a href="#">
+                    <img
+                        src="./assets/images/blog-4.jpg"
+                        alt="Strategi Penjualan Ikan Terbaik untuk Kenaikan Laba."
+                        class="blog-banner"
+                        width="300"
+                    />
+                </a>
+
+                <div class="blog-content">
+                    <a href="#" class="blog-category">Ikan</a>
+
+                    <h3>
+                        <a href="#" class="blog-title"
+                            >Strategi Penjualan Ikan Terbaik untuk Kenaikan Laba.</a
+                        >
+                    </h3>
+
+                    <p class="blog-meta">
+                        By <cite>Mr Pawar</cite> /
+                        <time datetime="2022-03-15">15 Mar 2022</time>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </main>
+
+    <!--
+    - FOOTER
+  -->
+    <footer>
+      <div class="footer-category">
+        <div class="container">
+          <h2 class="footer-category-title">Kategori Brand</h2>
+
+          <div class="footer-category-box">
+            <h3 class="category-box-title">Ikan :</h3>
+
+            <a href="#" class="footer-category-link">Ikan Segar</a>
+            <a href="#" class="footer-category-link">Ikan Laut</a>
+            <a href="#" class="footer-category-link">Ikan Tawar</a>
+            <a href="#" class="footer-category-link">Ikan Hias</a>
+            <a href="#" class="footer-category-link">Ikan Konsumsi</a>
+          </div>
+
+          <div class="footer-category-box">
+            <h3 class="category-box-title">Perlengkapan :</h3>
+
+            <a href="#" class="footer-category-link">Keranjang Ikan</a>
+            <a href="#" class="footer-category-link">Tangki Ikan</a>
+            <a href="#" class="footer-category-link">Pakan Ikan</a>
+            <a href="#" class="footer-category-link">Filter Aquarium</a>
+          </div>
+
+          <div class="footer-category-box">
+            <h3 class="category-box-title">Aksesoris :</h3>
+
+            <a href="#" class="footer-category-link">Hiasan Aquarium</a>
+            <a href="#" class="footer-category-link">Ornamen Ikan</a>
+            <a href="#" class="footer-category-link">Tanaman Air</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-nav">
+        <div class="container">
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item">
+              <h2 class="nav-title">Kategori Populer</h2>
+            </li>
+
+            <li class="footer-nav-item">
+              <a href="#" class="footer-nav-link">Ikan Segar</a>
+            </li>
+
+            <li class="footer-nav-item">
+              <a href="#" class="footer-nav-link">Perlengkapan Ikan</a>
+            </li>
+
+            <li class="footer-nav-item">
+              <a href="#" class="footer-nav-link">Aksesoris Aquarium</a>
+            </li>
+          </ul>
+
+          <!-- Sisanya -->
+        </div>
+
+      <div class="footer-nav">
+  <div class="container">
+    <ul class="footer-nav-list">
+      <li class="footer-nav-item">
+        <h2 class="nav-title">Kategori Populer</h2>
+      </li>
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link">Ikan Hias</a>
+      </li>
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link">Ikan Air Tawar</a>
+      </li>
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link">Ikan Laut</a>
+      </li>
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link">Aksesoris Ikan</a>
+      </li>
+    </ul>
+
+    <ul class="footer-nav-list">
+      <li class="footer-nav-item">
+        <h2 class="nav-title">Produk</h2>
+      </li>
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link">Ikan Terbaru</a>
+      </li>
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link">Promo</a>
+      </li>
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link">Peralatan Perikanan</a>
+      </li>
+    </ul>
+
+    <ul class="footer-nav-list">
+      <li class="footer-nav-item">
+        <h2 class="nav-title">Perusahaan Kami</h2>
+      </li>
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link">Tentang Kami</a>
+      </li>
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link">Kebijakan Privasi</a>
+      </li>
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link">Syarat dan Ketentuan</a>
+      </li>
+    </ul>
+
+    <ul class="footer-nav-list">
+      <li class="footer-nav-item">
+        <h2 class="nav-title">Kontak</h2>
+      </li>
+      <li class="footer-nav-item">
+        <address class="content">
+          Jl. Madrasah Dalam No.33A, Klp. Dua, Kec. Kb. Jeruk
+          Jakarta Barat
+        </address>
+      </li>
+      <li class="footer-nav-item">
+        <a href="tel:+62123456789" class="footer-nav-link">+62 123-456-789</a>
+      </li>
+      <li class="footer-nav-item">
+        <a href="mailto:info@juku.com" class="footer-nav-link">info@penjualanikan.com</a>
+      </li>
+    </ul>
+
+    <ul class="footer-nav-list">
+      <li class="footer-nav-item">
+        <h2 class="nav-title">Ikuti Kami</h2>
+      </li>
+      <li>
+        <ul class="social-link">
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+</div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <img
+            src="./assets/images/payment.png"
+            alt="metode pembayaran"
+            class="payment-img"
+          />
+
+          <p class="copyright">
+            Hak Cipta &copy; <a href="#">Juku</a> semua hak dilindungi.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!--
+    - custom js link
+  -->
+    <script src="./assets/js/script.js"></script>
+
+    <!--
+    - ionicon link
+  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
